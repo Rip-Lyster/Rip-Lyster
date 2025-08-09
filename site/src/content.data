@@ -1,28 +1,4 @@
-
-# Website content and settings (in YAML format)
-
-# Parsed and given as argument to SSR render() function
-# check: scripts/render.js
-
 title: Rip Lyster
-heading: Rip Lyster
-description: Technologist and product thinker with a Carnegie Mellon engineering background.
-github: Rip-Lyster
 favicon: img/stack.svg
 logo: img/logo.svg
-
-projects:
-  - Projects coming soon
-
-themes:
-  - name: Light
-    color: fff
-  - name: Dark
-    color: 21262d
-  - name: Vibrant
-    class: dark vibrant
-    color: 0098c8
-
-secondary_css:
-  - css/themes.css
-  - css/dialog.css
+github: Rip-Lyster

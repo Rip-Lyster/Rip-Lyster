@@ -43,17 +43,17 @@ bun run dev
 - [ ] Components: Header, Footer, Section, Button, Card, ProjectCard, Badge, Container
 
 ## 4) Pages & components implementation (Nue.js)
-- [ ] Home: hero + highlights (projects/experience)
+- [x] Home: hero + intro (Markdown-driven)
 - [ ] Projects: grid/list with filters (optional)
 - [ ] Project detail (optional template)
-- [ ] About: story, skills, education, recommendations
+- [x] About: story, skills (Markdown-driven)
 - [ ] Contact: form or mailto, social links
 - [ ] Resume: link to PDF, optionally inline HTML version
 - [ ] 404 page
 
 ## 5) Data/content plumbing
-- [ ] Choose content format: Markdown/JSON for projects/about
-- [ ] Build data loaders/utilities
+- [x] Choose content format: Markdown for pages (index/about)
+- [x] Build data loader: SSR Markdown parsing with markdown-it
 - [ ] Social links: LinkedIn, GitHub, email
 
 ## 6) SEO & metadata
@@ -78,6 +78,7 @@ bun run dev
 Notes:
 - Build script added to `site/package.json` ("build": "nue render"); output dir is `www/`.
 - Added `site/vercel.json` to use static-build with `www` as `distDir`.
+- Pages authored at `site/content/pages/*.md`; parsed server-side with `markdown-it`.
 
 Common commands
 ```bash
@@ -97,5 +98,23 @@ bun run preview # if available
 - [ ] Monthly content refresh
 - [ ] Dependency updates & security
 - [ ] Backup and export plan for content/assets
+
+
+## 11) Review follow-ups (Nue alignment + perf) — 2025-08-09
+- [x] Keep external CSS (`css/tokens.css`); inlining caused Nue parse issues with `:root` tokens
+  - Retained a tiny inline style only for `scroll-behavior`
+- [x] Optimize LCP image in `site/src/layout.nue`
+  - Added `width="800" height="800" decoding="async" fetchpriority="high` to the headshot `<img>`
+- [x] Remove dead code from layout
+  - Deleted trailing `<script>` block at end of file
+- [x] Clean unused assets from `site/www/` (or stop committing `www/` entirely and let Vercel build)
+  - Removed `site/www/css/primary.css` and confirmed no references
+  - `site/www/img/settings.svg` not present; confirmed unreferenced
+- [x] Deployment config sanity
+  - Move Vercel config to repo root; point to `site/package.json`, set `distDir: site/www` and use Bun
+
+## Follow-ups
+- [ ] SEO: titles/meta templates, `sitemap.xml`, `robots.txt`, OG/Twitter cards
+- [ ] 404 page (`www/404.html` or route), and basic accessibility pass
 
 

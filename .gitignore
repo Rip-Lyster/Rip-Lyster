@@ -23,3 +23,6 @@ pnpm-debug.log*
 .vscode/
 
 
+# Static build output (Vercel builds; do not commit)
+site/www/
+

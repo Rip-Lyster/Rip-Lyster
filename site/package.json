@@ -2,15 +2,15 @@
   "name": "create-nue",
   "type": "module",
   "version": "0.0.0",
+  "packageManager": "bun@1.2.19",
   "scripts": {
     "start": "nue start",
-    "render": "nue render",
+    "render": "nue render && mkdir -p www/css && cp src/styles/tokens.css www/css/tokens.css",
     "compile": "nue compile",
     "serve": "nue serve",
-    "build": "nue render"
+    "build": "bun run render"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
     "nuejs-core": "^0.1.0"
   },
   "devDependencies": {

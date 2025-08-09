@@ -1,21 +1,17 @@
 
 <!--
   Library of server-side components used by layout.nue
-
-  See: scripts/render.js
 -->
 
 
 <!-- site header -->
 <header @name="site-header" class="mastnav">
-  <a href="/"><img class="logo" :src="logo" alt="Home"></a>
+  <a href="./"><img class="logo" src="img/logo.svg" alt="Home"></a>
   <nav>
-    <dialog-opener key="themes"/>
-    <a href="/">Home</a>
+    <a href="./index.html">Home</a>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-    <a href="https://github.com/{ github }" aria-label="GitHub">
+    <a href="https://github.com/Rip-Lyster" aria-label="GitHub">
       <img src="img/github.svg" class="icon" alt="GitHub"></a>
   </nav>
 </header>
@@ -39,3 +35,14 @@
 <footer @name="site-footer" class="site-footer">
   <p>© { new Date().getFullYear() } Rip Lyster</p>
 </footer>
+
+<!-- server-side HTML passthrough: receives precompiled HTML -->
+<article @name="html-block" class="markdown-body">
+  <div :html="html"></div>
+
+  <script>
+    constructor({ html }) {
+      this.html = html || ''
+    }
+  </script>
+</article>

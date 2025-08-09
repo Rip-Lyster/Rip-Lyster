@@ -6,32 +6,63 @@
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="{ favicon }">
   <title>{ title }</title>
-  <style>{ primary_css }</style>
+  <style>html{scroll-behavior:smooth}</style>
   <link rel="stylesheet" href="css/tokens.css">
 
   <!-- header component (server-side) -->
-  <site-header :logo="logo" :github="github"/>
+  <div class="mastnav">
+    <div class="container">
+      <site-header logo="{ logo }" github="{ github }"/>
+    </div>
+  </div>
 
-  <main>
+  <main class="container">
     <header id="top" class="hero">
-      <img src="img/headshots/rip_lyster_headshot.jpeg" alt="Rip Lyster headshot" class="hero-headshot" width="144" height="144">
-      <div>
-        <h1>{ heading }</h1>
-        <p>{ description }</p>
+      <div class="content">
+        <img src="/img/headshots/rip_lyster_headshot.jpg" width="800" height="800" decoding="async" fetchpriority="high" alt="Rip Lyster headshot" class="hero-headshot">
+        <div class="text">
+          <h1>Rip Lyster</h1>
+          <p>Technologist and product thinker with a Carnegie Mellon engineering background.</p>
+          <p>See more <a href="#about">About</a>.</p>
+        </div>
       </div>
     </header>
 
     <section id="about">
       <h2>About</h2>
-      <markdown-loader path="content/about.txt"></markdown-loader>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <article>
-        <item-list :items="projects" class="grid"/>
+      <article class="markdown-body">
+        <h1>Short Bio</h1>
+        <p>I’m a technologist and product thinker with a Carnegie Mellon engineering background, a lifelong passion for athletics, and a knack for turning complex challenges into clear, actionable solutions. Whether in the climbing gym or the product lab, I’m driven by growth, discipline, and helping others reach their potential.</p>
+        <hr>
+        <h1>About</h1>
+        <p>My career bridges technology, product strategy, and engineering—shaped by years of solving problems in fast-paced, high-stakes environments. I enjoy connecting technical execution with strategic thinking, ensuring that products and systems deliver real value to the people who use them. I thrive where curiosity, clarity, and follow-through are essential.</p>
+        <p>Athletics has been a constant thread in my life, from competing as an NCAA swimmer to now coaching youth climbing at <a href="https://movementgyms.com">Movement Gyms</a> in Sunnyvale, CA. Coaching has reinforced my belief that progress is as much about mindset and perseverance as it is about skill—and that applies equally to sport, technology, and life.</p>
+        <p>I’m passionate about building both people and products, finding that the most rewarding work comes from guiding others, collaborating openly, and tackling challenges with a mix of discipline and creativity.</p>
+        <hr>
+        <h1>Skills</h1>
+        <h2>Strategy &amp; Execution</h2>
+        <ul>
+          <li>Product vision &amp; roadmap planning</li>
+          <li>Growth strategy &amp; performance optimization</li>
+          <li>Systems thinking &amp; cross-functional leadership</li>
+        </ul>
+        <h2>Technical</h2>
+        <ul>
+          <li>Software engineering (Python, AWS, embedded systems)</li>
+          <li>Data-driven problem-solving</li>
+          <li>Technical documentation &amp; process improvement</li>
+        </ul>
+        <h2>Coaching &amp; Collaboration</h2>
+        <ul>
+          <li>Athletic coaching &amp; youth development</li>
+          <li>Team motivation &amp; goal setting</li>
+          <li>Clear, concise communication</li>
+          <li>Mentorship &amp; skill-building</li>
+        </ul>
       </article>
     </section>
+
+    
 
     <section id="contact">
       <h2>Contact</h2>
@@ -41,14 +72,9 @@
     <site-footer/>
   </main>
 
-  <!-- theme selector dialog (client-side component)-->
-  <theme-selector :themes="themes" id="themes"/>
-
-  <!-- setup all client-side/reactive components  -->
-  <script type="module" src="setup.js"></script>
-
-  <!-- secondary CSS -->
-  <link :for="href in secondary_css" :href="href" rel="stylesheet" fetchpriority="low">
+  <!-- No client-side islands or extra scripts needed -->
 
 </html>
+
+ 
 

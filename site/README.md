@@ -15,4 +15,5 @@ Debugging in Cursor/VS Code
   - "Bun: Render (nue render)" for one-off builds
 
 Notes
-- Vercel static build uses `bun run build` (alias for `nue render`) with output in `www/`.
+- Vercel builds from source using Bun; `www/` is not committed.
+- Root `vercel.json` points to `site/package.json` and sets `distDir: site/www`.
