@@ -13,9 +13,12 @@
   <site-header :logo="logo" :github="github"/>
 
   <main>
-    <header id="top">
-      <h1>{ heading }</h1>
-      <p>{ description }</p>
+    <header id="top" class="hero">
+      <img src="img/headshots/rip_lyster_headshot.jpeg" alt="Rip Lyster headshot" class="hero-headshot" width="144" height="144">
+      <div>
+        <h1>{ heading }</h1>
+        <p>{ description }</p>
+      </div>
     </header>
 
     <section id="about">

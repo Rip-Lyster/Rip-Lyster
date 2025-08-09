@@ -46,4 +46,20 @@ a { color: var(--color-accent); }
   border-radius: var(--radius-md);
 }
 
+.hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-5);
+}
+
+.hero-headshot {
+  width: 144px;
+  height: 144px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-border);
+}
+
 
