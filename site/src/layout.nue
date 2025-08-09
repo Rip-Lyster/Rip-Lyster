@@ -23,7 +23,7 @@
 
     <section id="about">
       <h2>About</h2>
-      <markdown-loader path="content/about.md"></markdown-loader>
+      <markdown-loader path="content/about.txt"></markdown-loader>
     </section>
 
     <section id="projects">
