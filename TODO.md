@@ -5,7 +5,7 @@ A living checklist to plan, build, and launch your portfolio. Update as we go.
 ## 0) Decisions to unblock build
 - [x] Domain: use `riplyster.com` (registrar/DNS access confirmed by owner)
 - [ ] Branding: primary/secondary colors, fonts, logo/wordmark, headshot
-  - [x] Palette stored at `design/colors.json`
+  - [x] Palette stored at `project/design/colors.json`
 - [ ] Sections: About, Experience, Projects, Skills, Education, Recommendations, Contact, Resume
 - [x] Blog: add later (keep as TODO); likely Markdown/MDX
 - [ ] Content source: hand-authored Markdown in repo vs external CMS (Notion, etc.)
