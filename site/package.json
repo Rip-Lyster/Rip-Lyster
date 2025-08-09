@@ -6,7 +6,8 @@
     "start": "nue start",
     "render": "nue render",
     "compile": "nue compile",
-    "serve": "nue serve"
+    "serve": "nue serve",
+    "build": "nue render"
   },
   "dependencies": {
     "js-yaml": "^4.1.0",

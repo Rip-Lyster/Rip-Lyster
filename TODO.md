@@ -18,8 +18,8 @@ A living checklist to plan, build, and launch your portfolio. Update as we go.
 
 ## 1) Local setup
 - [ ] Install Node.js LTS (>= 18) or rely on Bun runtime where possible
-- [ ] Create repo and first commit
-- [ ] Scaffold Nue.js app (confirm correct framework/starter)
+- [x] Create repo and first commit
+- [x] Scaffold Nue.js app (minimal starter) in `site/`
 
 ```bash
 # Using Bun (exact CLI depends on chosen Nue.js starter)
@@ -74,6 +74,10 @@ bun run dev
 - [ ] Add environment variables (if any)
 - [ ] Configure custom domain + SSL
 - [ ] Enable Vercel Analytics (low priority)
+
+Notes:
+- Build script added to `site/package.json` ("build": "nue render"); output dir is `www/`.
+- Added `site/vercel.json` to use static-build with `www` as `distDir`.
 
 Common commands
 ```bash
