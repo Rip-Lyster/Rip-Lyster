@@ -13,18 +13,29 @@
   <site-header :logo="logo" :github="github"/>
 
   <main>
-    <header>
+    <header id="top">
       <h1>{ heading }</h1>
       <p>{ description }</p>
     </header>
 
-    <article>
-      <item-list :items="projects" class="grid"/>
-    </article>
+    <section id="about">
+      <h2>About</h2>
+      <!-- content will be wired later from markdown -->
+    </section>
 
-    <footer>
-      <img :src="favicon" class="icon">
-    </footer>
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <item-list :items="projects" class="grid"/>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:riplyster@live.com">riplyster@live.com</a></p>
+    </section>
+
+    <site-footer/>
   </main>
 
   <!-- theme selector dialog (client-side component)-->

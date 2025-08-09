@@ -8,11 +8,15 @@
 
 <!-- site header -->
 <header @name="site-header" class="mastnav">
-  <a href="https://nuejs.org/"><img class="logo" :src="logo"></a>
+  <a href="/"><img class="logo" :src="logo" alt="Home"></a>
   <nav>
     <dialog-opener key="themes"/>
-    <a href="https://github.com/{ github }">
-      <img src="img/github.svg" class="icon"></a>
+    <a href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/{ github }" aria-label="GitHub">
+      <img src="img/github.svg" class="icon" alt="GitHub"></a>
   </nav>
 </header>
 
@@ -30,3 +34,8 @@
     }
   </script>
 </ul>
+
+<!-- simple footer -->
+<footer @name="site-footer" class="site-footer">
+  <p>© { new Date().getFullYear() } Rip Lyster</p>
+</footer>
