@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="{ favicon }">
   <title>{ title }</title>
   <style>{ primary_css }</style>
-  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="css/tokens.css">
 
   <!-- header component (server-side) -->
   <site-header :logo="logo" :github="github"/>
@@ -20,7 +20,7 @@
 
     <section id="about">
       <h2>About</h2>
-      <!-- content will be wired later from markdown -->
+      <markdown-loader path="content/about.md"></markdown-loader>
     </section>
 
     <section id="projects">

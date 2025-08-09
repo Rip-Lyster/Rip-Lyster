@@ -3,41 +3,58 @@
 <html>
   <meta charset="utf-8">
   <meta name="generator" content="Nue (nuejs.org)">
-  <meta name="date.updated" content="2025-08-09T03:59:21.855Z">
+  <meta name="date.updated" content="2025-08-09T04:02:53.446Z">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="img/stack.svg">
   <title>Rip Lyster</title>
   <style>/** * The contents of this file is included on the generated * HTML file for quicker page load */ /* Normalize */ * { box-sizing: border-box; margin: 0; } html { overflow-x: hidden; } a { cursor: pointer; } /* Layout */ body > * { max-width: 920px; margin: 0 auto; padding: 2em; } main { text-align: center; } main > header { margin-bottom: 2em; } /* Typography */ body { font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Segoe UI, Roboto, Noto Sans, Helvetica Neue; -webkit-font-smoothing: antialiased; line-height: 1.5; color: #4a4f53; } h1, h2, h3 { color: black; line-height: .9; } h1 { font-size: 5.5em; font-weight: 900; margin-bottom: .1em; } h3 { margin-bottom: .2em; } h1 + p { font-size: 1.6em; } /* Master navigation */ .mastnav { justify-content: space-between; margin-bottom: 2.5em; align-items: center; margin-bottom: 1em; display: flex; } .mastnav a { display: inline-block; transition: transform .1s; } .mastnav a:hover { transform: scale(1.05); } .mastnav a:active { transform: scale(.99); } .icon { width: 1.4em; margin-left: .5em; } .logo { max-height: 2em; } /* Project list */ .grid { list-style: none; display: grid; grid-template-columns: 50% 50%; font-size: 1.08em; gap: 1.5em; padding: 0; } .grid li { box-shadow: 0 1px 2px #0001, .1em .4em 1em rgba(0,0,0,0.08); border-radius: 2px; padding: 1.2em 1.6em; text-align: left; } /* Footer */ footer { font-size: 1.8em; padding: 3em; } /* Mobile layout */ @media (max-width: 900px) { main > header { font-size: 80%; } h1 { font-size: 4.3em; } h1 + p { max-width: 14em; margin: 0 auto 2em; } .grid { grid-template-columns: 100%; max-width: 440px; margin: 0 auto; font-size: .95em; } }</style>
-  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="css/tokens.css">
 
   
   <header class="mastnav">
-  <a href="https://nuejs.org/"><img class="logo" src="img/logo.svg"></a>
+  <a href="/"><img class="logo" alt="Home" src="img/logo.svg"></a>
   <nav>
     <nue-island key="themes" island="dialog-opener"></nue-island>
-    <a href="https://github.com/Rip-Lyster">
-      <img src="img/github.svg" class="icon"></a>
+    <a href="/">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a aria-label="GitHub" href="https://github.com/Rip-Lyster">
+      <img src="img/github.svg" class="icon" alt="GitHub"></a>
   </nav>
 </header>
 
   <main>
-    <header>
+    <header id="top">
       <h1>Rip Lyster</h1>
       <p>Technologist and product thinker with a Carnegie Mellon engineering background.</p>
     </header>
 
-    <article>
-      <ul class="grid">
+    <section id="about">
+      <h2>About</h2>
+      
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <ul class="grid">
   <li>
     <h3>0</h3><p>P</p></li>
 
   
 </ul>
-    </article>
+      </article>
+    </section>
 
-    <footer>
-      <img class="icon" src="img/stack.svg">
-    </footer>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:riplyster@live.com">riplyster@live.com</a></p>
+    </section>
+
+    <footer class="site-footer">
+  <p>&#xa9; 2025 Rip Lyster</p>
+</footer>
   </main>
 
   

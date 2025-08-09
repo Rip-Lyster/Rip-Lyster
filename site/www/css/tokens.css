@@ -1,0 +1,49 @@
+:root {
+  /* Brand palette (source: project/design/colors.json) */
+  --rl-1: #edebda;
+  --rl-2: #c4c1b6;
+  --rl-3: #fbf7f5;
+  --rl-4: #ca9e6b;
+  --rl-5: #716559;
+  --rl-6: #847c73;
+  --rl-7: #aba394;
+  --rl-8: #91957f;
+  --rl-9: #44332d;
+  --rl-10: #b6948d;
+  --rl-11: #78825b;
+  --rl-12: #4d4048;
+  --rl-13: #d3cbc0;
+  --rl-14: #134346;
+
+  /* Suggested tokens (can tweak later) */
+  --color-bg: var(--rl-3);
+  --color-fg: var(--rl-12);
+  --color-accent: var(--rl-4);
+  --color-muted: var(--rl-7);
+  --color-border: var(--rl-2);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+a { color: var(--color-accent); }
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+
