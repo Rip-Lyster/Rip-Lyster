@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="{ favicon }">
   <title>{ title }</title>
   <style>{ primary_css }</style>
+  <link rel="stylesheet" href="/src/styles/tokens.css">
 
   <!-- header component (server-side) -->
   <site-header :logo="logo" :github="github"/>
