@@ -33,5 +33,41 @@ export const lib = [
     (_,e) => { _.change(_.el, e, _.i) },
     _ => [_.el.name]
   ]
+},{
+  name: 'markdown-loader',
+  tagName: 'section',
+  tmpl: '<section class="markdown-body"> </section>',
+  Impl: class { 
+    async connected() {
+      try {
+        const srcPath = this.root.getAttribute('path')
+        if (!srcPath) return
+        const res = await fetch(srcPath)
+        const md = await res.text()
+        this.root.innerHTML = this.mdToHtml(md)
+      } catch (e) {
+        this.root.innerHTML = '<p>Failed to load content.</p>'
+      }
+    }
+    mdToHtml(md) {
+      // very small markdown-to-html: headings, lists, links, paragraphs
+      let html = md
+        .replace(/^###\s+(.*)$/gm, '<h3>$1</h3>')
+        .replace(/^##\s+(.*)$/gm, '<h2>$1</h2>')
+        .replace(/^#\s+(.*)$/gm, '<h1>$1</h1>')
+        .replace(/^-\s+(.*)$/gm, '<li>$1</li>')
+        .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1<\/a>')
+      // wrap list items
+      html = html.replace(/(<li>[\s\S]*?<\/li>)(?!(.|\n)*<li>)/g, '<ul>$1</ul>')
+      // horizontal rule
+      html = html.replace(/^---$/gm, '<hr ></hr>')
+      // paragraphs: blank-line separated
+      html = html
+        .split(/\n\n+/)
+        .map(block => /<(h\d|ul|hr)/.test(block) ? block : `<p>${block}</p>`)
+        .join('\n')
+      return html
+    }
+   },
 }]
 export default lib[0]

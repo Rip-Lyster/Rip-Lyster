@@ -1,1 +1,0 @@
-Placeholder for headshot added via app assets. Replace this file with the final image (e.g., headshot.jpg).
